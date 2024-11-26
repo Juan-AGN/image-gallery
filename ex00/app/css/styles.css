@@ -1,0 +1,234 @@
+h1 {
+    text-align: center;
+    align-self: center;
+}
+
+#searcher {
+    border-radius: 5px;
+    width: 80%;
+    align-self: center;
+    top:10%;
+    border-radius: 90px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-style: solid;
+    border-color: rgb(81, 81, 81);
+    border-right: hidden;
+    border-width: 2px;
+}
+
+#search_button {
+    width: 30%;
+    background-color: rgb(123, 123, 123);
+    border-radius: 90px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-style: solid;
+    border-color: rgb(81, 81, 81);
+    border-left: hidden;
+    border-width: 2px;
+    border-left: 1px;
+    border-left-color: rgb(81, 81, 81);
+    border-left-style: double;
+    transition: 0.3s;
+}
+
+#load_button {
+    width: 100%;
+    background-color: rgb(123, 123, 123);
+    border-radius: 90px;
+    height: 5%;
+    border-style: solid;
+    border-color: rgb(81, 81, 81);
+    border-width: 2px;
+    border-left-color: rgb(81, 81, 81);
+    transition: 0.2s;
+    display: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.searcherdiv {
+    display: flex;
+    position: fixed;
+    width: 80%;
+    opacity: 40%;
+    border-radius: 90px;
+    margin-left: 10%;
+    transition: 0.5s;
+}
+
+.loaderdiv {
+    width: 80%;
+    border-radius: 90px;
+    margin-left: 10%;
+    transition: 0.5s;
+}
+
+#load_button:active {
+    box-shadow: inset 0 0 10px #000000;
+    border-color: #000000;
+    background-color: rgb(99, 99, 99);
+}
+
+.searcherdiv:hover {
+    opacity: 100%;
+    box-shadow: 10px 10px;
+}
+
+#search_button:active {
+    box-shadow: inset 0 0 10px #000000;
+    border-color: #000000;
+    background-color: rgb(99, 99, 99);
+}
+
+#Image_container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    width: 90%;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    left: 5%;
+    gap: 3.33%;
+    height: auto;
+    align-items: center;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.boxed_image {
+    height: auto; 
+    width: 100%; 
+    padding: 0px;
+    border-radius: inherit;
+    display: block;
+}
+
+.imagediv{
+    box-shadow: 5px 5px 10px #000000;
+    height: fit-content;
+    width: 100%;
+    padding: 0px;
+    float: right;
+    margin: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.imagediv:hover{
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.imagediv_liked {
+    box-shadow:  5px 5px 10px #ff90f4;
+    height: fit-content;
+    width: 100%;
+    padding: 0px;
+    float: right;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: #ff90f4;
+    transition: 0.5s;
+}
+
+.imagediv_liked:hover {
+    border-radius: 0px;
+    box-shadow: none;
+    border-style: dotted;
+    border-width: 2px;
+    border: #ff90f4;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    height: 5%;
+    background-color: rgb(35, 35, 35);
+    border-top-style: solid;
+    border-top: 2px;
+    border-top-color: rgb(67, 67, 67);
+    transition: 0.5s;
+}
+
+#login, #logout {
+    position: absolute;
+    width: 40%;
+    background-color: rgb(123, 123, 123);
+    border-radius: 90px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-style: solid;
+    border-color: rgb(81, 81, 81);
+    border-left: hidden;
+    border-width: 2px;
+    transition: 0.3s;
+    height: 50%;
+    left: 0;
+}
+
+#logout {
+    display: none;
+}
+
+#login:hover, #logout:hover {
+    box-shadow: inset 0 0 10px #000000;
+    border-color: #000000;
+    background-color: rgb(169, 169, 169);
+}
+
+#login:active, #logout:active {
+    box-shadow: inset 0 0 10px #000000;
+    border-color: #000000;
+    background-color: rgb(99, 99, 99);
+}
+
+#favorite, #no_favorite {
+    position: absolute;
+    width: 40%;
+    background-color: rgb(234, 87, 195);
+    border-radius: 90px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-style: solid;
+    border-color: rgb(101, 0, 105);
+    border-right: hidden;
+    border-width: 2px;
+    transition: 0.3s;
+    color:white;
+    height: 50%;
+    right: 0;
+}
+
+#no_favorite {
+    display: none;
+}
+
+#favorite:hover, #no_favorite:hover {
+    box-shadow: inset 0 0 10px #000000;
+    border-color: #240025;
+    background-color: rgb(255, 255, 255);
+    color: rgb(234, 87, 195);
+}
+
+#favorite:active, #no_favorite:active {
+    box-shadow: inset 0 0 10px #35002d;
+    border-color: #1d0020;
+    background-color: rgb(255, 232, 251);
+}

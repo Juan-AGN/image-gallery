@@ -1,0 +1,13 @@
+services:
+  backend:
+    container_name: app
+    build:
+      context: ./app
+    ports:
+      - "3000:3000"
+    networks:
+      - basic_network
+
+networks:
+  basic_network:
+    name: basic_network

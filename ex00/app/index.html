@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/">
+</head>
+<body margin="0">
+    <script src="/main_script/"></script>
+    <h1>IMAGE GALLERY</h1>
+    <div class="centerer">
+        <div class="searcherdiv">
+            <input type="text" id ="searcher" placeholder="Type anything"><input type="submit" onclick="photos_generator_searcher()" id ="search_button" value="Submit"></input>
+        </div>
+    </div>
+    <div id="Image_container">
+    </div>
+    <br>
+    <div class="loaderdiv"><br><input type="submit" onclick="photos_generator()" id ="load_button" value="Show more"><br><br><br></div>
+    <footer>
+        <input type="submit" onclick="login()" id ="login" value="log in">
+        <input type="submit" onclick="logout()" id ="logout" value="log out">
+        <a href="https://github.com/Juan-AGN" target="_blank" style="text-align: center;font-size: 1.5VW; margin: auto;">MADE BY: juan-ant</a>
+        <input type="submit" onclick="generate_favorites()" id ="favorite" value="See favorite photos">
+        <input type="submit" onclick="" id ="no_favorite" value="You have to be logeded to see favorite photos">
+    </footer>
+</body>
+</html>
