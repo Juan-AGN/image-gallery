@@ -139,7 +139,6 @@ async function display_favs() {
   let favs;
   let fav_counter = 0;
 
-  onfavs = 0;
   favs = await get_favs(fav_page, 10);
   if (favs == null)
     return -1;
@@ -204,7 +203,10 @@ async function save_favorite(id) {
       }
       const result = await response.json();
       console.log(result);
+      console.log("like:");
+      console.log(like);
       like.replace(`/${id}/g`, "");
+      console.log(like);
       document.getElementById(id).classList.add('imagediv');
       document.getElementById(id).classList.remove('imagediv_liked');
       return result;
@@ -229,7 +231,10 @@ async function save_favorite(id) {
       console.log(result);
       document.getElementById(id).classList.add('imagediv_liked');
       document.getElementById(id).classList.remove('imagediv');
-      like += `${id} |`;
+      console.log("like:");
+      console.log(like);
+      like += ` ${id} |`;
+      console.log(like);
       return result;
     } catch (error) {
       console.error('Error:', error);
@@ -271,7 +276,7 @@ async function downloadRandomPhoto(prompt) {
   console.log(randomPhoto.id);
   console.log(images);data
   if (images.search(randomPhoto.id) == -1) {
-    images += randomPhoto.id + ' |';
+    images += ' ' + randomPhoto.id + ' |';
     const imageUrl = randomPhoto.urls.regular;
     const responseImage = await fetch(imageUrl);
     const blob = await responseImage.blob();
